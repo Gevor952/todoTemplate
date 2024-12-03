@@ -1,0 +1,245 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url("images/freepik__a-serene-landscape-with-mountains-silhouetted-agai__58151 (1).jpeg") no-repeat;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    background: #232323;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main_div{
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    background: white;
+}
+
+.main_div h1{
+    text-align: center;
+}
+
+.buts{
+    width: 40%;
+    height: auto;
+    margin: 30px 30% 20px 38%;
+}
+
+
+.a_but{
+    background: white;
+    margin: 0 0 0 20px;
+
+}
+
+.a_but p{
+    width: 100px;
+    height: 30px;
+    border: #232121 solid 1px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: #232121;
+    margin: 20px 0 0 0;
+}
+
+.a_but p:hover{
+    width: 120px;
+    height: 40px;
+    border: #232121 solid 1px;
+}
+
+table, td, th {
+    border: 1px solid #232121;
+    text-align: left;
+}
+
+table {
+    width: 80%;
+    height: auto;
+    border-collapse: collapse;
+    margin: 0 10% 0 10%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+input{
+    width: 200px;
+    height: 50px;
+    margin:  0 0 0 20px;
+    border: gray solid 1px;
+}
+
+input:focus{
+    outline: #423e3e;
+    border: #423e3e solid 1px;
+}
+#form_1{
+    margin: 30px 10% 0 18%;
+}
+
+#add_1{
+    width: 100px;
+    height: 30px;
+    margin:  20px 0 0 64%;
+}
+
+#add_1:hover{
+    width: 120px;
+    height: 32px;
+}
+
+#form_2{
+    margin: 30px 14% 0 14%;
+}
+
+#add_2{
+    width: 100px;
+    height: 30px;
+    margin:  20px 0 0 79%;
+}
+
+#add_2:hover{
+    width: 120px;
+    height: 32px;
+}
+
+#singin{
+    position: absolute;
+}
+#singin p{
+    margin: 0;
+}
+
+#registration{
+    background: white;
+}
+
+#registration p{
+    background: white;
+    margin: 0;
+}
+
+
+#logout{
+    position: absolute;
+}
+
+#logout p{
+    margin: 0;
+}
+
+.p_message_user{
+    float: right;
+    font-size: 18px;
+    background: #641598;
+    border-radius: 15px;
+}
+
+.p_message_friend{
+    font-size: 18px;
+    margin:5px 30% 5px 0;
+    background: #641598;
+    border-radius: 15px;
+}
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin:5px 0 5px 30%;
+
+}
+
+#my_profil{
+    position: absolute;
+    margin: 0 0 0 140px;
+
+}
+
+#my_profil p{
+    margin: 0;
+}
+
+
+#img_lg{
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 140px;
+}
+
+
+#span_lg{
+    margin: 0 0 0 20px;
+    color: white;
+}
+
+#img_lg_id{
+    height: 100%;
+}
+
+
+
+
+#home_btn1{
+    margin: 5px 0 0 10px;
+    font-size: 16px;
+}
+
+#home_btn2{
+    margin: 5px 0 0 10px;
+    font-size: 16px;
+}
+
+#myProfil_nav{
+    margin: 5px 0 0 180px;
+    font-size: 16px;
+}
+
+.outer-div {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.inner-div {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+.inner-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.porc{
+    width: 400px;
+    height: 50px;
+    border: #641598 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8; /* Если нужен другой фон */
+}
