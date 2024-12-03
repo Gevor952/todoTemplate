@@ -1,18 +1,18 @@
-package am.itspace.myfriend.db;
+package am.itspace.todotemplate.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnectionProvider {
-    private static DBConnectionProvider dbConnectionProvider;
+    private static final DBConnectionProvider dbConnectionProvider;
     private Connection connection;
 
     static {
         dbConnectionProvider = new DBConnectionProvider();
     }
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/my_friend";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/todo_template";
     private static final String DB_USER_NAME = "root";
     private static final String DB_PASSWORD = "root";
 

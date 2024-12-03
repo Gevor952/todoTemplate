@@ -1,24 +1,17 @@
-package am.itspace.myfriend.servlet;
+package am.itspace.todotemplate.servlet;
 
 
-import am.itspace.myfriend.model.User;
-import am.itspace.myfriend.service.UserService;
+import am.itspace.todotemplate.model.User;
+import am.itspace.todotemplate.service.UserService;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 import java.io.IOException;
 
 @WebServlet("/registration")
-@MultipartConfig(
-        maxFileSize = 1024 * 1024 * 5, //5mb
-        maxRequestSize = 1024 * 1024 * 10,
-        fileSizeThreshold = 1024 * 1024 * 1
-)
 public class UserRegistrationServlet extends HttpServlet {
 
 
@@ -64,16 +57,6 @@ public class UserRegistrationServlet extends HttpServlet {
 
 
 
-        Part img = req.getPart("img");
-        String imgName = System.nanoTime() + "_" + img.getSubmittedFileName();
-        img.write(IMG_FOLDER + imgName);
-
-        if (img == null) {
-            msgBuilder.append("<br>");
-            msgBuilder.append("Please select an image");
-        }
-
-
         if (userService.grtByEmail(email) != null) {
             msgBuilder.append("<br>");
             msgBuilder.append("Your account has been registered with this email");
@@ -81,12 +64,12 @@ public class UserRegistrationServlet extends HttpServlet {
             req.setAttribute("msg", msgBuilder.toString());
             req.getRequestDispatcher("/WEB-INF/registration.jsp").forward(req, resp);
         } else {
+
             User user = User.builder()
                     .name(name)
                     .surname(surname)
                     .email(email)
                     .password(password)
-                    .image_name(imgName)
                     .build();
             userService.add(user);
             req.getSession().setAttribute("user", user);

@@ -43,11 +43,6 @@
             <input type="password" name="password" placeholder="password" required>
             <i class='bx bx-lock-alt'></i>
         </div>
-        <div class="input-box">
-            <input type="file" name="img" id="file_input">
-            <i class='bx bx-file'></i>
-        </div>
-
         <button class="my_btn">Register</button>
     </form>
 

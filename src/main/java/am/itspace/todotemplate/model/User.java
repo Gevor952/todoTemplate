@@ -1,13 +1,9 @@
-package am.itspace.myfriend.model;
+package am.itspace.todotemplate.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.security.cert.CertPathBuilder;
-import java.time.chrono.Chronology;
-import java.util.Date;
 
 @Data
 @Builder
@@ -19,8 +15,5 @@ public class User {
     private String surname;
     private String email;
     private String password;
-    private String image_name;
-
-
 
 }

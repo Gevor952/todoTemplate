@@ -1,4 +1,4 @@
-package am.itspace.myfriend.servlet;
+package am.itspace.todotemplate.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

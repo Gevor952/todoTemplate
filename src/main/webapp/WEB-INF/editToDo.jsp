@@ -1,4 +1,4 @@
-<%--
+<%@ page import="am.itspace.todotemplate.model.ToDo" %><%--
   Created by IntelliJ IDEA.
   User: NITRO
   Date: 19.11.2024
@@ -26,23 +26,14 @@
     <p style="color: red"><%=request.getAttribute("msg")%>
     </p>
     <%}%>
-    <form action="/registration" method="post">
+    <form action="/editToDo" method="post">
+        <%ToDo toDo = ((ToDo) request.getAttribute("toDo"));%>
+        <input type="hidden" name="id" value="<%=toDo.getId()%>">
         <div class="input-box">
-            <input type="text" placeholder="name" name="name">
-            <i class='bx bx-user'></i>
+            <input type="text" placeholder="title" name="title" value="<%=toDo.getTitle()%>">
+            <i class='bx bx-file-blank'></i>
         </div>
-        <div class="input-box">
-            <input type="text" placeholder="surname" name="surname">
-            <i class='bx bx-user'></i>
-        </div>
-        <div class="input-box">
-            <input type="email" placeholder="email" name="email">
-            <i class='bx bx-envelope'></i>
-        </div>
-        <div class="input-box">
-            <input type="password" name="password" placeholder="password" required>
-            <i class='bx bx-lock-alt'></i>
-        </div>
+
         <button class="my_btn">Register</button>
     </form>
 
