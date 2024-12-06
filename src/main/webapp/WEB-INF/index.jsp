@@ -143,7 +143,10 @@
                         <div class="col-auto d-flex align-items-center rounded bg-white border border-warning">
                             <i class="fa fa-hourglass-2 my-2 px-2 text-warning btn" data-toggle="tooltip"
                                data-placement="bottom" title="" data-original-title="Due on date"></i>
-                            <h6 class="text my-2 pr-2"><%=DateUtil.javaToWeb(toDo.getFinishedDateTime())%>
+                            <h6 class="text my-2 pr-2">
+                                <%if(toDo.getFinishedDateTime() !=null){%>
+                                <%=DateUtil.javaToWeb(toDo.getFinishedDateTime())%>
+                                <%}%>
                             </h6>
                         </div>
                     </div>
