@@ -3,6 +3,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.sql.Date" %>
 <%@ page import="am.itspace.todotemplate.Enum.Status" %>
+<%@ page import="am.itspace.todotemplate.util.DateUtil" %>
 <html lang="en">
 <head>
     <title>TODO</title>
@@ -142,7 +143,7 @@
                         <div class="col-auto d-flex align-items-center rounded bg-white border border-warning">
                             <i class="fa fa-hourglass-2 my-2 px-2 text-warning btn" data-toggle="tooltip"
                                data-placement="bottom" title="" data-original-title="Due on date"></i>
-                            <h6 class="text my-2 pr-2"><%=toDo.getFinishedDateTime()%>
+                            <h6 class="text my-2 pr-2"><%=DateUtil.javaToWeb(toDo.getFinishedDateTime())%>
                             </h6>
                         </div>
                     </div>
@@ -165,7 +166,7 @@
                         <div class="col-auto d-flex align-items-center pr-2">
                             <i class="fa fa-info-circle my-2 px-2 text-black-50 btn" data-toggle="tooltip"
                                data-placement="bottom" title="" data-original-title="Created date"></i>
-                            <label class="date-label my-2 text-black-50"><%=toDo.getCreatedDateTime()%>
+                            <label class="date-label my-2 text-black-50"><%=DateUtil.javaToWeb(toDo.getCreatedDateTime())%>
                             </label>
                         </div>
                     </div>
